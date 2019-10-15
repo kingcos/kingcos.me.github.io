@@ -1,3 +1,40 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseurl = "/"
+languageCode = "zh-cn"
+title = "kingcos.me"
+theme = "hello-friend"
+paginate = 10
+googleAnalytics = "UA-138311951-1"
+
+[params]
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+  # "light" or "dark"
+  defaultTheme = "dark"
+  # if you set this to 0, only submenu trigger will be visible
+  # showMenuItems = 4
+  # Show reading time in minutes for posts
+  # showReadingTime = true
+  # set a custom favicon (default is a `themeColor` square)
+  # favicon = "img/favicon/favicon.ico"
+
+[languages]
+  [languages.en]
+    title = "iBlog"
+    # subtitle = "github.com/kingcos"
+    keywords = "kingcos.me,maimieng.comios,swift,objective-c,obj-c,objc,oc,geek,python,ruby,golang,go,apple,mac"
+    copyright = "All rights reserved by kingcos.me"
+    menuMore = "Show more"
+    writtenBy = "Written by"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
+    minuteReadingTime = "min read"
+    dateFormatSingle = "2006-01-02"
+    dateFormatList = "2006-01-02"
+
+    [languages.en.params.logo]
+      logoText = "kingcos.me"
+      # path = "img/favicon/favicon.ico"
+      # alt = "Your example logo alt text"
+      logoHomeLink = "/"

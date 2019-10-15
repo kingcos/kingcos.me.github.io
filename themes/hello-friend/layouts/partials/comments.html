@@ -1,0 +1,56 @@
+<!--
+To add comments section, please create `layouts/partials/comments.html` in your
+Hugo directory and insert:
+
+{{ template "_internal/disqus.html" . }}
+
+or whatever comment engine you want -> https://gohugo.io/content-management/comments/#readout
+-->
+{{ if and .IsPage (ne .Params.comment false) }}
+    <!-- utteranc -->
+    {{ if .Site.Params.utteranc.enable }}
+    <div>
+      <div id="github-comment">
+      </div>
+
+      <script type="text/javascript">
+        function getUtterances(isDark) {
+          var utterances = document.createElement('script');
+          utterances.type = 'text/javascript';
+          utterances.async = true;
+          utterances.setAttribute('issue-term', "{{ .Site.Params.utteranc.issueTerm }}")
+          utterances.setAttribute('repo', "{{ .Site.Params.utteranc.repo }}")
+          utterances.setAttribute('label', "{{ .Site.Params.utteranc.label }}")
+          isDark ? utterances.setAttribute('theme', "{{ .Site.Params.utteranc.darkTheme }}") : utterances.setAttribute('theme', "{{ .Site.Params.utteranc.lightTheme }}")
+          utterances.crossorigin = 'anonymous';
+          utterances.src = 'https://utteranc.es/client.js';
+
+          return utterances
+        }
+
+        var themeToggle = document.querySelector(".theme-toggle")
+        themeToggle.addEventListener("click", function () {
+          var getTheme = window.localStorage && window.localStorage.getItem("theme")
+          var divNode = document.getElementById('github-comment')
+          while(divNode.hasChildNodes()) {
+            divNode.removeChild(divNode.firstChild);
+          }
+          // var iframe = document.getElementsByClassName('utterances-frame')
+          // if (iframe.length == 0) { return }
+          // var links =  iframe[0].contentWindow.document.getElementsByTagName('link')
+
+          // for(i = 0; i < links.length; i++) {
+          //   alert(links[i].getAttribute('href'))
+          //   if (links[i].getAttribute('href').indexOf('utterances') != -1) {
+          //     isDark ? e.setAttribute('href', 'github-light') : e.setAttribute('href', 'github-dark')
+          //   }
+          // }
+          document.getElementById('github-comment').appendChild(getUtterances(getTheme !== "dark"))
+        })
+
+        var getTheme = window.localStorage && window.localStorage.getItem("theme")
+        document.getElementById('github-comment').appendChild(getUtterances(getTheme === "dark"))
+      </script>
+    </div>
+    {{ end }}
+{{- end }}

@@ -1,0 +1,23 @@
+body {
+    font-weight: 400;
+}
+
+blockquote {
+    margin: 20px
+}
+
+.button.previous {
+    max-width: 50%;
+}
+
+.button.next {
+    max-width: 50%;
+}
+
+.pagination__title {
+    margin-top: 50px;
+}
+
+table, td {
+    word-break: break-all;
+}

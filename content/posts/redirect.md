@@ -2,7 +2,7 @@
 title: "➡ kingcos.me"
 date: 2019-10-15
 draft: false
-description: "https://kingcos.me maimieng.com 是我个人注册的第一个域名，但由于年少无知，注册的名字没有规律，不易记忆。我于今日注册了 [**kingcos.me**](https://kingcos.me) 新域名。maimieng.com 是我个人注册的第一个域名，但由于年少无知，注册的名字没有规律，不易记忆。我于今日注册了 [**kingcos.me**](https://kingcos.me) 新域名。maimieng.com 是我个人注册的第一个域名，但由于年少无知，注册的名字没有规律，不易记忆。我于今日注册了 [**kingcos.me**](https://kingcos.me) 新域名。maimieng.com 是我个人注册的第一个域名，但由于年少无知，注册的名字没有规律，不易记忆。我于今日注册了 [**kingcos.me**](https://kingcos.me) 新域名。"
+description: "https://kingcos.me"
 ---
 
 哈喽：
